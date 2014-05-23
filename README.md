@@ -3,7 +3,7 @@ Perceptron-Algorithms
 
 This repository consists of the project done as part of the course  Statistical Methods in AI- Monsoon 2013. The course was instructed by [Dr. Anoop Nambodiri](http://faculty.iiit.ac.in/~anoop/)  
 
-A detailed report is available &lt;a href="https://drive.google.com/file/d/0B87x7EOOS4ztVzJtWVdUNW1qbzA/edit?usp=sharing">here&lt;/a>  
+A detailed report is available <a href="https://drive.google.com/file/d/0B87x7EOOS4ztVzJtWVdUNW1qbzA/edit?usp=sharing">here</a>  
 
 ##Requirements  
 Matlab R2012a
@@ -19,9 +19,10 @@ In this step all the training samples of the MS2CD dataset are augmented with on
 **[dataAug]= preProcess (data,label,class_a)**  
 where data and label are the respective training samples and class_a is the class which we want to negate. The function returns the augmented and negated training samples in the matrix dataAug
  
-* singleSamplePerceptron.m
+* singleSamplePerceptron.m  
 * BatchPerceptron.m
 * BatchRelaxation.m  
+
 In this step we find the decision boundary using the preprocessed training samples. The training can be done using a variety of ways.In this experiment I have included five algorithms:  
 1)Single Sample Perceptron without margin  
 2)Single Sample Perceptron with margin  
@@ -46,7 +47,7 @@ In this step we find the accuracy of the classifier by calling the following fun
 **[accuracy]=calculateAccuracy(data,label,classNegative,a)**  
 where we input the test data, labels, the class which we had negated to ease calculation and the solution vector obtained from the previous step.The function returns the accuracy expressed in percentage
 
-plotdecisionboundary.m  
+* plotdecisionboundary.m  
 Alternatively, we can plot the samples and the decision boundary to check the accuracy graphically. It can be dome by calling the following function:  
 **[h]=plotdecisionboundary(a,data,label)**
 
@@ -62,11 +63,11 @@ A typical call to this function is as follows:
 
 In this experiment I have included five algorithms.The function names are given against each algorithm:
 
-The algonumber for the corresponding algorithm are as follows:
-1-Single Sample Perceptron without margin-@singleSamplePerceptron
-2-Single Sample Perceptron with margin-@singleSamplePerceptron(pass a non zero margin as argument)
-3-Batch Perceptron without margin-@BatchPerceptron
-4-Batch Perceptron with margin-@BatchPerceptron(pass a non zero margin as argument)
+The algonumber for the corresponding algorithm are as follows:  
+1-Single Sample Perceptron without margin-@singleSamplePerceptron  
+2-Single Sample Perceptron with margin-@singleSamplePerceptron(pass a non zero margin as argument)  
+3-Batch Perceptron without margin-@BatchPerceptron  
+4-Batch Perceptron with margin-@BatchPerceptron(pass a non zero margin as argument)  
 5-Batch Relaxation with margin=@BatchRelaxation(pass a non zero margin as argument)
 
 It takes as input the filename for testing and the algorithm number and returns the output label
